@@ -58,7 +58,7 @@ bot.on("guildMemberAdd", member => {
 
     //WELKOMS BERICHT ;)
 
-    const channel = member.guild.channels.find("id", "692330562316402719");
+    const channel = member.guild.channels.find("id", "695196273057202243");
 
     if (!channel) return console.log("Oeps! Het welkomskanaal is niet gevonden!");
     //FETCH MEMBER COUNT -> #member
@@ -71,7 +71,7 @@ bot.on("guildMemberAdd", member => {
             var joindate = member.joinedAt.toString().split(" ");
 
             var joinEmbed = new discord.RichEmbed()
-                    .setAuthor("Welkom bij TheKingdom!!", icon)
+                    .setAuthor("Welkom op kinkercraft!", icon)
                     .setColor("#29e53f")
                     .setDescription(`Welkom ${member}!`)
                     .addField("Jouw joindatum:", `${joindate[2]} ${joindate[1]} ${joindate[3]} ${joindate[4]}`)
@@ -87,7 +87,7 @@ bot.on("message", async message => {
     var prefix = botConfig.prefix;
 
     //IDEEEN KANAAL
-    if (message.channel.id == "692460036273733683") {
+    if (message.channel.id == "695610426628505611") {
         var idee = message.cleanContent;
         message.delete(1000);
 
@@ -97,7 +97,7 @@ bot.on("message", async message => {
             .setColor("FFFF00")
             .setTimestamp(message.timestamp);
 
-        var kickChannel = message.guild.channels.find("id", "692460036273733683");
+        var kickChannel = message.guild.channels.find("id", "695610426628505611");
         if (!kickChannel) return console.error("suggestiekanaal niet gevonden!");
 
         kickChannel.send({
