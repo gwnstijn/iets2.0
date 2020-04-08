@@ -1,13 +1,13 @@
 module.exports.run = async (bot, message, args) => {
 
-    const archief = "697102238233133147";
+    const archief = "695324582504038500";
 
     var type = args[0];
 
     if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Je hebt geen toegang tot dit commando!");
 
     // Als bericht in ticket kanaal is dan verwijder kanaal ander zend bericht
-    if (message.channel.parentID == "697101972679163924") {
+    if (message.channel.parentID == "695320319480823818") {
         try {
             if (type.toLowerCase() == "ARCHIEF".toLowerCase()) {
                 message.channel.setParent(archief).then((settedParent) => {
